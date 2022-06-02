@@ -45,7 +45,8 @@ public class PlayerLook : MonoBehaviour
             sensX = 0f;
             sensY = 0f;
         }
-        else
+        
+        if (!PauseMenu.isPaused)
         {
             sensX = 100f;
             sensY = 100f; 

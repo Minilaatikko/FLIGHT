@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         PauseUI = transform.GetChild(0).gameObject;
+
+        PlayerPrefs.SetInt ("lastLevel", SceneManager.GetActiveScene().buildIndex);
     }
 
     void Update()
@@ -49,5 +51,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 }
